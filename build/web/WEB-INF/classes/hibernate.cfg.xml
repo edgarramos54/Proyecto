@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://proyectoawbd.database.windows.net:1433;databaseName=Tienda;user=edgar@proyectoawbd;password={vaqueton+12};Integrated Security=true;</property>
+    <property name="hibernate.connection.username">edgar@proyectoawbd</property>
+    <property name="hibernate.connection.password">vaqueton+12</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <mapping resource="Modelo/Dulces.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

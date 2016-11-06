@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <ui:define name="contenido">
+        <f:view contentType="text/html">
+            <h:head>
+                
+                <f:facet name="first">
+                    <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                    <title>Dulceria</title>
+                </f:facet>
+            </h:head>
+
+            <h:body style="background: aqua;" >
+                <h:form id="frmDulceria"> 
+                    <p:commandButton id="showAltaButton" title="Agregar"
+                                         
+                                         iconPos="center" 
+                                        />
+                        <p:dataTable id="dulces" var="DU" 
+                                 value="#{dulceriaBeanUI.helper.listadulces}"
+                                 
+                                 emptyMessage="No se encontraron registros a mostrar">
+
+                            <p:column headerText="Id">  
+                                <h:outputText value="#{DU.idDulce}" />  
+                            </p:column>
+
+                            <p:column headerText="Nombre">  
+                                <h:outputText value="#{DU.nombreDulce}"/>  
+                            </p:column>
+
+                            <p:column headerText="Cantidad">  
+                                <h:outputText value="#{DU.cantidadDulce}"/>  
+                            </p:column>
+             
+                        </p:dataTable>
+                </h:form>
+            </h:body>
+            </f:view>
+    </ui:define>    
+</ui:composition>
